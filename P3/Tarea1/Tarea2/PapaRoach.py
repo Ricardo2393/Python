@@ -15,10 +15,11 @@ def menu():
 
 	print ("\t3. reproducir")
 
-    
+	print ("\t9. Salir")
+ctotal = 10
+kill = 0   
 while True:
-    ctotal = 10
-    kill = 0
+    
     
     
     menu()
@@ -33,15 +34,23 @@ while True:
     if opc ==1:
         print ("con esta solo matas a una")
         kill =+1
+        ctotal = ctotal - kill
+        print("cuantas quedan")
+        print(ctotal)
     elif opc ==2:
         print ("con esta solo matas a 5")
         kill =+5
+        ctotal = ctotal - kill
+        print("cuantas quedan")
+        print(ctotal)
     elif opc ==3:
         print ("salieron 3 mas ")
         ctotal = ctotal +3
-    break
+        print("cuantas quedan")
+        print(ctotal)
+    elif opc ==9:
+        break
     
-remain = ctotal - kill
+    
 print("cuantas quedan")
-print(remain)
-
+print(ctotal)
